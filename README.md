@@ -44,6 +44,21 @@ uv run streamlit run src/ikano_case/app.py
 | `GET /fact?n=5` | `n` (int ≥ 0) | n! factorial |
 | `GET /loan?P=100000&r=0.005&n=360&M=0` | `P` principal, `r` monthly rate, `n` months, `M` repayment | Monthly loan repayment |
 
+## CLI usage
+
+The core functions can also be run directly from the command line:
+
+```bash
+# Fibonacci
+uv run src/ikano_case/ikano_case.py fibo --n 10
+
+# Factorial
+uv run src/ikano_case/ikano_case.py fact --n 5
+
+# Loan repayment (P=principal, r=monthly interest rate, n=months, M=monthly repayment)
+uv run src/ikano_case/ikano_case.py loan --P 100000 --r 0.005 --n 360 --M 600
+```
+
 ## Running tests
 
 ```bash
