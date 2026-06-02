@@ -1,3 +1,9 @@
+**TODO**
+- [ ] Write tests for the api
+- [ ] Write tests for the app
+- [ ] Write tests forcused on loan function econmic theory
+
+
 # ikano_case
 
 Solution to the Ikano Bank developer case. Exposes three mathematical functions (Fibonacci, Factorial, Loan repayment) via a FastAPI backend and a Streamlit frontend.
