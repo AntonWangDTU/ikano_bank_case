@@ -55,8 +55,8 @@ uv run src/ikano_case/ikano_case.py fibo --n 10
 # Factorial
 uv run src/ikano_case/ikano_case.py fact --n 5
 
-# Loan repayment (P=principal, r=monthly interest rate, n=months, M=monthly repayment)
-uv run src/ikano_case/ikano_case.py loan --P 100000 --r 0.005 --n 360 --M 600
+# Loan repayment (P=principal, r=monthly interest rate, n=months)
+uv run src/ikano_case/ikano_case.py loan --P 100000 --r 0.005 --n 360 
 ```
 
 ## Running tests
