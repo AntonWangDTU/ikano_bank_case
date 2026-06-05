@@ -1,9 +1,3 @@
-**TODO**
-- [ ] Write tests for the api
-- [ ] Write tests for the app
-- [ ] Write tests forcused on loan function econmic theory
-
-
 # ikano_case
 
 Solution to the Ikano Bank developer case. Exposes three mathematical functions (Fibonacci, Factorial, Loan repayment) via a FastAPI backend and a Streamlit frontend.
@@ -82,3 +76,16 @@ tests/
 ├── test_api.py
 └── test_ikano_case.py
 ```
+
+## Assumptions and Limitations
+
+**Assumptions**
+- The loan interest rate `r` is a monthly rate (e.g. `0.005` for 0.5% per month). No conversion from annual rates is performed.
+- There are no caps on loan inputs — arbitrarily large principals, rates, or term lengths are accepted without warning.
+- `n` for Fibonacci and Factorial must be a plain Python `int`; integer-like types (e.g. `numpy.int64`) are rejected.
+- Loan repayments are always rounded to two decimal places, regardless of currency.
+
+**Limitations**
+- The factorial function is recursive with no iterative fallback, so very large inputs will hit Python's recursion limit.
+- Zero-interest loans cannot be calculated; the loan function requires `r > 0`.
+- All API parameters are passed as query strings, meaning sensitive financial values (principal, rate) appear in server logs.
